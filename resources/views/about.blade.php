@@ -1,6 +1,9 @@
-@extends('layouts.app', ['title' => 'about'])
-@section('content')
+<x-app-layout title="About">
     <div class="container">
-        <h1>Halaman About</h1>
+        <x-card title="About" subtitle="About Me">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente consequuntur exercitationem obcaecati natus
+            quisquam nostrum maxime tenetur, explicabo beatae nesciunt?
+        </x-card>
     </div>
-@endsection
+</x-app-layout>
+

@@ -1,6 +1,9 @@
-@extends('layouts.app', ['title' => 'gallery'])
-@section('content')
+<x-app-layout title="Gallery">
     <div class="container">
-        <h1>Halaman Gallery</h1>
+        <x-card title="Gallery" subtitle="Gallery ku">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente consequuntur exercitationem obcaecati natus
+            quisquam nostrum maxime tenetur, explicabo beatae nesciunt?
+        </x-card>
     </div>
-@endsection
+</x-app-layout>
+
