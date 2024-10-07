@@ -19,6 +19,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/users">users</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/articles">Blog</a>
+                </li>
             </ul>
         </div>
     </div>
