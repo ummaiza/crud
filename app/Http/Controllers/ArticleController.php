@@ -52,4 +52,36 @@ class ArticleController extends Controller
 
         return redirect('/articles/create');
     }
+
+    public function edit($id)
+    {
+        return view('articles.edit',[
+            'article' => DB::table('articles')->find($id)
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        #validate
+        $request->validate([
+            'title' => ['required'],
+            'body' => ['required'],
+        ]);
+
+        $article = DB::table('articles')->where('id',$id)->first();
+
+        DB::table('articles')->where('id', $id)->update([
+            'title' => $request->title,
+            'body' => $request->body,
+        ]);
+
+
+        return redirect("articles/{$article->id}");
+    }
+
+    public function destroy($id)
+    {
+        DB::table('articles')->delete($id);
+        return back();
+    }
 }

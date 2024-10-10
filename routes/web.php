@@ -19,6 +19,7 @@ Route::post('articles', [ArticleController::class, 'store']);
 Route::get('articles/{id}/edit', [ArticleController::class, 'edit']);
 Route::put('articles/{id}', [ArticleController::class, 'update']);
 Route::get('articles/{id}', [ArticleController::class, 'show']);
+Route::delete('articles/{id}', [ArticleController::class, 'destroy']);
 
 #user
 Route::get('users', [UserController::class, 'index']);
